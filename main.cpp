@@ -106,7 +106,7 @@ public:
                         }else if (field[y][x] = '#')
                         {
                             y++;
-                        }else if (field[y][x] = 'B')
+                        }else if (field[y][x] == 'B')
                         {
                             bombCheck();
                         }
@@ -126,7 +126,7 @@ public:
                         }else if (field[y][x] = '#')
                         {
                             y--;
-                        }else if (field[y][x] = 'B')
+                        }else if (field[y][x] == 'B')
                         {
                             bombCheck();
                         }
