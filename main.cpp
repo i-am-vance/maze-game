@@ -6,6 +6,7 @@ using namespace std;
 class Maze_game
 {
 public:
+    bool winGame = false;
     int x = 0;
     int y = 1;
 
@@ -20,6 +21,13 @@ public:
         {'#','#','#','#','#','#','#','#','#','#','#','#'}
         };
 
+    void winCheck()
+    {
+        if (x == 11 && y == 6)
+        {
+            winGame = true;
+        }
+    }
     void printField(){
         system("clear");
 
@@ -49,6 +57,7 @@ public:
                             x++;
                             field[y][x] = ' ';
                             x--; 
+                            winCheck();
                         }else if (field[y][x] == '#')
                         {
                             x++;
@@ -65,6 +74,7 @@ public:
                             x--;
                             field[y][x] = ' ';
                             x++;
+                            winCheck();
                         }else if (field[y][x] == '#')
                         {
                             x--;
@@ -81,6 +91,7 @@ public:
                             y++;
                             field[y][x] = ' ';
                             y--;
+                            winCheck();
                         }else if (field[y][x] = '#')
                         {
                             y++;
@@ -97,6 +108,7 @@ public:
                             y--;
                             field[y][x] = ' ';
                             y++;
+                            winCheck();
                         }else if (field[y][x] = '#')
                         {
                             y--;
