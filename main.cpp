@@ -28,6 +28,11 @@ public:
             winGame = true;
         }
     }
+    void bombCheck()
+    {
+        winGame = true;
+        cout << "game over";
+    }
     void printField(){
         system("clear");
 
@@ -61,6 +66,9 @@ public:
                         }else if (field[y][x] == '#')
                         {
                             x++;
+                        }else if (field[y][x] == 'B')
+                        {
+                            bombCheck();
                         }
                     }
                     break;
@@ -78,6 +86,9 @@ public:
                         }else if (field[y][x] == '#')
                         {
                             x--;
+                        }else if (field[y][x] == 'B')
+                        {
+                            bombCheck();
                         }
                     }
                     break;
@@ -95,6 +106,9 @@ public:
                         }else if (field[y][x] = '#')
                         {
                             y++;
+                        }else if (field[y][x] = 'B')
+                        {
+                            bombCheck();
                         }
                     }
                     break;
@@ -112,6 +126,9 @@ public:
                         }else if (field[y][x] = '#')
                         {
                             y--;
+                        }else if (field[y][x] = 'B')
+                        {
+                            bombCheck();
                         }
                     }
                     break;
