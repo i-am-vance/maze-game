@@ -26,12 +26,13 @@ public:
         if (x == 11 && y == 6)
         {
             winGame = true;
+            cout << "win!!!!!!!!";
         }
     }
     void bombCheck()
     {
         winGame = true;
-        cout << "game over";
+        cout << "game over!";
     }
     void printField(){
         system("clear");
@@ -147,7 +148,9 @@ public:
 };
 
 int main()
-{
+{   
+    Maze_game maze_game;
+    maze_game.execute();
     
     return 0;
 }
