@@ -6,6 +6,8 @@ using namespace std;
 class Maze_game
 {
 public:
+    enum eDirecton {LEFT, RIGHT, UP, DOWN};
+    eDirecton dir;
 
     void printField(){
         system("clear");
@@ -28,6 +30,27 @@ public:
                 cout << field[i][j];
             }
             cout << endl;
+        }
+    }
+    void Input()
+    {
+        if  (_kbhit())
+        {
+            switch (getch())
+            {
+                case 'a':
+                    dir = LEFT;
+                    break;
+                case 'd':
+                    dir = RIGHT;
+                    break;
+                case 'w':
+                    dir = UP;
+                    break;
+                case 's':
+                    dir = DOWN;
+                    break;
+            }
         }
     }
 };
