@@ -135,6 +135,15 @@ public:
             }
         }
     }
+    void execute()
+    {
+        while(!winGame)
+        {
+            printField();
+            movePlayer();
+            sleep(1);
+        }
+    }
 };
 
 int main()
